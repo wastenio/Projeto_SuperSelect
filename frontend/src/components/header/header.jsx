@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
+// /* eslint-disable jsx-a11y/anchor-is-valid */
 // import logo from '../../assets/logo-dio.png';
 // import { Button } from '../Button';
 
@@ -6,13 +6,13 @@ import {
   BuscarInputContainer,
   Container,
   Input,
-  Menu,
+  // Menu,
   MenuRight,
   Row,
   UserPicture,
   Wrapper
 } from './styles';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 // import { useAuth } from '../../hooks/useAuth';
 
 
