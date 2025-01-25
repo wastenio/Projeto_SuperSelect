@@ -4,9 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style1.css">
-    <title>SuperSelect - Inovações para o Varejo</title>
-</head> 
+    <!-- link css -->
+    <link rel="stylesheet" href="style/style-login.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+    <title>SuperSelect - LOGIN</title>
+</head>
+
 <body>
     <!-- Navbar -->
     <div class="header">
@@ -19,7 +23,7 @@
     </div>
     <!-- Painel -->
     <div class="container">
-        <!-- info-text -->
+         <!-- info-text -->
         <div class="info">
             <h1>Adote as novas tecnologias administrativas usadas por empresas inovadoras do varejo</h1>
             <ul>
@@ -29,17 +33,21 @@
                     para você.</li>
                 <li>+10.000 avaliações positivas por grandes empresas no Brasil e exterior.</li>
             </ul>
-            <img src="logos.png" alt="Logos de empresas">
         </div>
+        <!-- card img das empresas -->
+        <!-- <img src="logos.png" alt="Logos de empresas"> -->
+        <!-- card login -->
         <div class="login">
             <h2>Já tem Cadastro?</h2>
+            <h4>Faça seu login e make the change</h4>
             <form>
                 <label for="email">E-mail</label>
-                <input type="email" id="email" placeholder="Digite seu e-mail">
+                <input type="email" id="email" placeholder="Digite seu e-mail" required>
                 <label for="password">Senha</label>
-                <input type="password" id="password" placeholder="Digite sua senha">
+                <input type="password" id="password" placeholder="Digite sua senha" required>
                 <button type="submit">Entrar</button>
             </form>
+            <!-- link de acesso -->
             <div class="links">
                 <a href="#" class="EsqueciSenha">Esqueci minha senha.</a>
                 <a href="#">Criar conta</a>
@@ -47,4 +55,5 @@
         </div>
     </div>
 </body>
+
 </html>
