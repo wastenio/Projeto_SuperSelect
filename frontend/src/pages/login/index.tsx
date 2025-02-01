@@ -1,55 +1,60 @@
-// import { MdEmail } from 'react-icons/md';
-// import { CiLock } from "react-icons/ci";
-// import { useForm } from 'react-hook-form';
-// import { yupResolver } from "@hookform/resolvers/yup"
-// import * as yup from "yup"
-// import { Button } from '../../components/Button';
-import React from 'react';
-import { Header } from '../../components/header/header';
-// import { Input } from '../../components/Input';
-// import { Column, Container, Criartext, EsqueciText, Row, SubtitleLogin, Title, TitleLogin, Wrapper } from './styles';
+import { MdEmail } from 'react-icons/md';
+import { CiLock } from "react-icons/ci";
+import { useForm } from 'react-hook-form';
+import { yupResolver } from "@hookform/resolvers/yup"
+import * as yup from "yup"
+import { Button } from '../../components/Button';
+import { Header } from '../../components/Header/header';
+import { Input } from '../../components/Input';
+import { Column, Container, Criartext, EsqueciText, Row, SubtitleLogin, Title, TitleLogin, Wrapper } from './style';
 import { IFormData } from './types';
-// import { useAuth } from '../../hooks/useAuth';
+import { useAuth } from '../../hooks/useAuth';
 
-// const schema = yup
-//   .object({
-//     email: yup
-//         .string()
-//         .email('email não é valido')
-//         .required('Campo obrigatório'),
-//     password: yup
-//         .string()
-//         .min(3, 'No minimo 3 caracteres')
-//         .required('Campo obrigatório'),
-//   })
-//   .required()
+const schema = yup
+  .object({
+    email: yup
+        .string()
+        .email('email não é valido')
+        .required('Campo obrigatório'),
+    password: yup
+        .string()
+        .min(3, 'No minimo 3 caracteres')
+        .required('Campo obrigatório'),
+  })
+  .required()
 
 const Login = () => {
-    // const { handleLogin} = useAuth();
+    const { handleLogin} = useAuth();
 
-    // const {
-    //     control, 
-    //     handleSubmit, 
-    //     formState: { errors },
-    //  } = useForm<IFormData>({
-    //     resolver: yupResolver(schema),
-    //     mode: 'onChange',
-    // });
+    const {
+        control, 
+        handleSubmit, 
+        formState: { errors },
+     } = useForm<IFormData>({
+        resolver: yupResolver(schema),
+        mode: 'onChange',
+    });
 
-    // const onSubmit = async (formData: IFormData) => {
-    //     handleLogin(formData);
+    const onSubmit = async (formData: IFormData) => {
+        handleLogin(formData);
        
-    // };
+    };
 
-    return(
-    <>
+    return(<>
         <Header />
-        {/* <Container>
+        <Container>
             <Column>
                 <Title>
-                    A plataforma para você aprender com experts, dominar as principais tecnologias
-                     e entrar mais rápido nas empresas mais desejadas.
+                    Adote as novas tecnologias administrativas usadas por empresas inovadoras do varejo
                 </Title>
+
+                <ul>
+                <li>Mais de 1.700 atacados e varejos, de pequeno a grande porte, estão cadastrados e utilizam nosso
+                    sistema.</li>
+                <li>Busque renovação & organização para sua empresa utilizando nosso sistema, desenvolvido especialmente
+                    para você.</li>
+                <li>+10.000 avaliações positivas por grandes empresas no Brasil e exterior.</li>
+            </ul>
             </Column>
             <Column>
                 <Wrapper>
@@ -66,9 +71,8 @@ const Login = () => {
                     </Row>
                 </Wrapper>
             </Column>
-        </Container> */}
-    </>
-    )
+        </Container>
+    </>)
 } 
 
 export { Login }
