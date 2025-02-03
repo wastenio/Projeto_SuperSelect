@@ -6,10 +6,14 @@ import {
 
 import { Home } from './pages/home/index';
 import { Login } from './pages/login';
-// import { Feed } from './pages/feed';
+import { Feed } from './pages/feed/index'
 import { Cadastro } from './pages/cadastro';
 import { AuthContextProvider } from "./context/auth";
-import React from "react";
+
+
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 
 function App() {
   return (
@@ -19,7 +23,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/cadastro" element={<Cadastro />} />
           <Route path="/login" element={<Login />} />
-          {/* <Route path="/feed" element={<Feed />} /> */}
+          <Route path="/feed" element={<Feed />} />
         </Routes>
       </AuthContextProvider>
     </Router>
