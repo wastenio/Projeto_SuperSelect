@@ -1,4 +1,4 @@
-// import logo from '../../assets/logo-dio.png';
+import logo from '../../assets/Logo_SuperSelect.png';
 import { Button } from '../Button';
 
 import {
@@ -24,7 +24,7 @@ const Header = () => {
       <Container>
         <Row>
           <Link to="/">
-            {/* <img src={logo} alt="Logo da DIO" /> */}
+            <img src={logo} alt="Logo da DIO" />
           </Link>
           {user.id ? (
             <>
@@ -40,14 +40,20 @@ const Header = () => {
         <Row>
           {user.id ? (
             <>
-              <UserPicture src="https://avatars.githubusercontent.com/u/124081837?s=96&v=4" />{ " "}
+              <UserPicture src="https://avatars.githubusercontent.com/u/124081837?s=96&v=4" />{" "}
               <a href="#" onClick={handleSignOut}>Sair</a>
             </>
           ) : (
             <>
-              <MenuRight href="#">Home</MenuRight>
-              <Button title="Entrar" />
-              <Button title="Cadastrar" />
+              <Link to="/">
+                <MenuRight href="#">Home</MenuRight>
+              </Link>
+              <Link to="/login">
+                <Button title="Entrar" />
+              </Link>
+              <Link to="/cadastro">
+                <Button title="Cadastrar" />
+              </Link>
             </>
           )}
         </Row>
